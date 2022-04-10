@@ -26,7 +26,7 @@ function edit($data,$id){
   $sampul=$_FILES['sampul'];
   $sampulName=$sampul["name"];
 $sampulFile=$sampul["tmp_name"];
-move_uploaded_file($sampulFile,"img/".$sampulName);
+move_uploaded_file($sampulFile,"style/".$sampulName);
 $query=$db->query("
 UPDATE tbl_siswa SET nama='$nama',kontak='$kontak',sampul='$sampulName' WHERE id='$id'
 ");
